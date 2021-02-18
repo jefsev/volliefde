@@ -1,0 +1,22 @@
+.btn__text-link {
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color:  $black;
+
+    img {
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+}
+
+.btn__menu {
+    text-decoration: none;
+    margin-left: 15px;
+
+    a {
+        padding: 18px 60px !important;
+        background: $green-light;
+        border-radius: 40px;
+    }
+}

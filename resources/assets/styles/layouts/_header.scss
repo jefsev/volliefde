@@ -1,0 +1,128 @@
+header.banner {
+	nav.nav-mobile-menu {
+		display: none;
+		.menu-menu-1-container {
+			height: 100%;
+			ul {
+				display: flex;
+				flex-direction: column;
+				list-style: none;
+				justify-content: center;
+				margin: 0;
+				padding: 0;
+				padding-left: 40px;
+				height: 100%;
+				li {
+					padding: 12px;
+
+					a {
+						text-decoration: none;
+						color: #fff;
+						font-size: 40px;
+					}
+				}
+			}
+		}
+	}
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1360px;
+		margin: 0 auto;
+		padding: 15px;
+		margin: auto;
+		a.brand {
+			text-decoration: none;
+			color: #000;
+		}
+		.mobile-hamburger-icon{
+			display: none;
+		}
+
+		nav.nav-primary {
+			margin-top: 12px;
+			.menu-menu-1-container {
+				ul {
+					display: flex;
+					flex-direction: row;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					li {
+						a {
+							text-decoration: none;
+							color: #000;
+							padding: 19px 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	header.banner {
+		nav.nav-mobile-menu{
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100vh;
+			background: #c0c0c0;
+			transition: .4s ease-in-out;
+			transform: translateX(-100%);
+		}
+		.container {
+			nav.nav-primary {
+				display: none;
+			}
+			.mobile-hamburger-icon {
+				display: block;
+				z-index: 10;
+				position: relative;
+				span {
+					display: block;
+					width: 33px;
+					height: 4px;
+					position: relative;
+					background: #fff;
+					z-index: 1;
+					transform-origin: 4px 0px;
+					transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+						background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+				}
+
+				span:first-child {
+					margin-bottom: 5px;
+					transform-origin: 0% 0%;
+				}
+
+				span:nth-last-child(2) {
+					margin-bottom: 5px;
+					transform-origin: 0% 100%;
+				}
+			}
+		}
+		.mobile-hamburger-active {
+			span {
+				transform: rotate(-45deg) translate(-3px, 0px);
+				opacity: 1;
+			}
+			span:nth-last-child(3) {
+				transform: rotate(45deg) translate(0px, -1px);
+				
+			}
+			span:nth-last-child(2) {
+				opacity: 0;
+				transform: rotate(0deg) scale(0.2, 0.2);
+			}
+		}
+		.mobile-menu-active{
+			transform: translateX(0) !important;
+		}
+	}
+}

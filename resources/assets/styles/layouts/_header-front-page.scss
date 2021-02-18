@@ -1,0 +1,21 @@
+.hero__front-page {
+    height: calc(100vh - 200px);
+    max-height: 650px;
+    .hero__inner {
+        height: calc(100vh - 200px);
+        max-height: 650px;
+        .hero__text {
+            max-width: 520px;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 400;
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
