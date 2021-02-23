@@ -10,6 +10,14 @@
     }
 }
 
+.btn__def {
+    padding: 18px 60px !important;
+    background: $green-light;
+    border-radius: 40px;
+    color: $black;
+    display: inline-block;
+}
+
 .btn__menu {
     text-decoration: none;
     margin-left: 15px;
