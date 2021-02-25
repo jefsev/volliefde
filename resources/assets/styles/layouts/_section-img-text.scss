@@ -1,0 +1,19 @@
+.c__section-img-text {
+    .w__section-img-text {
+        background:  $bg-yellow;
+        .img__l {
+            width: 40%;
+            height: 500px;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text__r {
+            width: 60%;
+            padding: 95px;
+        }
+    }
+}

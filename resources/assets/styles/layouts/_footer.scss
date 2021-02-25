@@ -1,0 +1,50 @@
+.footer__banner {
+    position: relative;
+    height: 133px;
+    background: $green;
+
+    .svg-circle {
+        position: absolute;
+        top: -28px;
+        margin: 0 auto;
+        z-index: 1;
+        left: 0;
+        right: 0;
+    }
+
+    h3 {
+        font-size: 24px;
+        color: #fff;
+        margin-top: 30px;
+    }
+}
+
+.w__footer {
+    padding-top: 75px;
+    padding-bottom: 100px;
+    .nav__footer {
+        width: calc(25% - 10px);
+
+        h4 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+
+        a {
+            margin-top: 20px;
+            color: $black;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+}
+
+.btm__footer {
+    padding-bottom: 20px;
+    span {
+        font-size: 12px;
+        font-weight: 300px;
+    }
+}
