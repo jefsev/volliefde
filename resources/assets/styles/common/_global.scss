@@ -1,3 +1,7 @@
+main {
+    overflow: hidden;
+}
+
 .boxed__m {
     max-width: 1200px;
     width: 100%;
@@ -20,6 +24,12 @@
 
 .f__reenie {
     font-family: 'Reenie Beanie';
+}
+
+h3.f__reenie {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 h2 {

@@ -8,7 +8,9 @@
             <a href="" class="btn__text-link"><img src="@asset('images\line-btn.svg')" alt="">Meer lezen</a>
         </div>
         <div class="hero__vid-img">
-
+            <video width="100%" height="100%" controls>
+                <source src="images/BOOOMTube.mov4" type="video/mp4">
+              </video>
         </div>
     </div>
 </section>
