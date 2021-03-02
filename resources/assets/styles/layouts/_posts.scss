@@ -1,0 +1,95 @@
+.les__hero {
+    width: 100%;
+
+    .hero-img {
+        width: 100%;
+        height: 288px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .hero__banner {
+        position: relative;
+        height: 100%;
+        background: $bg-yellow;
+        padding-top: 40px;
+        padding-bottom: 64px;
+    
+        .svg-circle {
+            position: absolute;
+            bottom: -28px;
+            margin: 0 auto;
+            z-index: 1;
+            left: 0;
+            right: 0;
+        }
+    
+        h1 {
+            font-size: 40px;
+            color: #000;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 300;
+            color: #000;
+        }
+    }
+}
+
+.c__pratical-info {
+    margin-bottom: 75px;
+    
+    .img__practical-info {
+        width: 50%;
+        
+        img {
+            width: 100%;
+            height: 468px;
+            object-fit: cover;
+        }
+    }
+
+    .info__practical-info {
+        width: 50%;
+        height: 468px;
+        background: $green;
+        padding: 50px 100px;
+
+        h3 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .info__row {
+            width: 100%;
+            max-width: 462px;
+            margin-bottom: 16px;
+
+            span.info-30 {
+                width: 35%;
+            }
+
+            span.info-70 {
+                width: 65%;
+            }
+
+            span {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+
+        .btn__def {
+            margin-top: 30px;
+        }
+    }
+}

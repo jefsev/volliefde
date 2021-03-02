@@ -6,6 +6,7 @@ use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use StoutLogic\AcfBuilder\FieldsBuilder;
 
 /**
  * Theme assets
@@ -128,5 +129,39 @@ add_action('after_setup_theme', function () {
      */
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
+    });
+});
+
+/**
+* Register custom post types
+*/
+
+add_action('init', function () {
+    $p_labels = [
+        'name'              => 'Lessen',
+        'singular_name'     => 'Les',
+        'add_new'           => 'Nieuw les',
+        'edit_item'         => 'Les aanpassen',
+    ];
+    register_post_type('lessen', [
+        'labels'            => $p_labels,
+        'public'            => true,
+        'has_archive'       => true,
+        'menu_icon'         => 'dashicons-calendar-alt',
+        'supports'          => array('title', 'thumbnail'),
+        'position'          => '4',
+    ]);
+});
+
+/**
+ * Initialize ACF Builder
+ */
+add_action('init', function () {
+    collect(glob(config('theme.dir').'/app/fields/*.php'))->map(function ($field) {
+        return require_once($field);
+    })->map(function ($field) {
+        if ($field instanceof FieldsBuilder) {
+            acf_add_local_field_group($field->build());
+        }
     });
 });
