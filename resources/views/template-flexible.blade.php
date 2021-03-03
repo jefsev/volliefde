@@ -6,9 +6,25 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.header-fw-img')
-    @include('partials.section-fw-text')
-    @include('partials.section-lesson-row')
-    @include('partials.section-img-text')
+    @layouts('header')
+      @layout('header_front_page')
+        @include('partials.header-front-page')
+      @endlayout
+      @layout('header_fw_img')
+        @include('partials.header-fw-img')
+      @endlayout
+    @endlayouts
+
+    @layouts('content')
+      @layout('section_lesson_row')
+        @include('partials.section-lesson-row')
+      @endlayout
+      @layout('section_fw_text')
+        @include('partials.section-fw-text')
+      @endlayout 
+      @layout('section_img_text')
+        @include('partials.section-img-text')
+      @endlayout 
+    @endlayouts
   @endwhile
 @endsection
