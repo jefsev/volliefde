@@ -25,6 +25,9 @@
       @layout('section_img_text')
         @include('partials.section-img-text')
       @endlayout 
+      @layout('contact_content')
+        @include('partials.section-contact-content')
+        @endlayout 
     @endlayouts
   @endwhile
 @endsection

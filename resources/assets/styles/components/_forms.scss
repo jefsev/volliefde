@@ -3,3 +3,37 @@
 // TODO: .search-form label {}
 // TODO: .search-form .search-field {}
 // TODO: .search-form .search-submit {}
+
+.wpcf7 {
+    input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=range], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], textarea {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        background: rgba(214, 234, 225, 0.5);
+    }
+
+    textarea {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        background: rgba(214, 234, 225, 0.5);
+    }
+
+    button, input[type=button], input[type=reset], input[type=submit] {
+            padding: 18px 60px !important;
+            background: $green-light;
+            border-radius: 40px;
+            color: $black;
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            font-size: 16px;
+        }
+    
+}
+
+.form_50 {
+    width: calc(50% - 8px);
+}

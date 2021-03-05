@@ -18,12 +18,20 @@ main {
 
 * {
     font-family: 'Montserrat';
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px;
+    line-height: 30px;
+    color: #000;
 }
+
 
 .f__reenie {
     font-family: 'Reenie Beanie';
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.5;
+    margin-bottom: 16px;
 }
 
 h3.f__reenie {
@@ -32,6 +40,22 @@ h3.f__reenie {
     margin-bottom: 10px;
 }
 
-h2 {
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+}
+
+h1 {
     font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 28px;
 }
