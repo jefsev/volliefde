@@ -18,11 +18,13 @@
             @endphp
             @posts($query)
                 <a href="@permalink" class="lesson__i">
-                    <img src="@asset('images/pregnant-grey.jpeg')" alt="" class="lesson__thumb">
-                    <span class="location">Nijmegen ochtend</span>
-                    <h3>@title</h3>
-                    <p>Probeer een proefles op zaterdag of zondag.</p>
-                    <span class="btn__def">Proefles</span>
+                    <img src="@thumbnail('full', false)" alt="" class="lesson__thumb">
+                    @group('samenvatting')
+                    <span class="location">@sub('sub_titel')</span>
+                    <h3>@sub('titel')</h3>
+                    <p>@sub('samenvatting')</p>
+                    <span class="btn__def">@sub('knop_text')</span>
+                    @endgroup
                 </a>
             @endposts
         </div>

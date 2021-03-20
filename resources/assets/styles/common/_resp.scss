@@ -1,0 +1,196 @@
+@media screen and (max-width: 1200px) {
+    .hero__front-page .hero__inner .hero__text {
+        max-width: auto;
+        width: 45%;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .hero__front-page .hero__inner .hero__vid-img {
+        width: 50%;
+        height: auto;
+    }
+
+    .c__lesson-row .w__lesson-row .lesson__row .lesson__i {
+        width: calc(33.333% - 30px);
+        margin: 0 15px;
+
+        img.lesson__thumb {
+            height: 360px;
+        }
+    }
+
+    .c__section-img-text .w__section-img-text .text__r {
+		padding: 40px;
+	}
+
+    .contact-content .contact-text {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .hero__front-page .hero__inner .hero__text {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero__front-page .hero__inner .hero__vid-img {
+        max-width: 640px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 60px;
+        
+    }
+
+    .hero__front-page {
+        height: 100%;
+        padding-bottom: 75px;
+        padding-top: 50px;
+        max-height: 100%;
+    }
+
+    .hero__front-page .hero__inner {
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .boxed__s {
+        max-width: 640px;
+    }
+
+    .c__lesson-row .w__lesson-row .lesson__row .lesson__i img.lesson__thumb {
+		height: 310px;
+	}
+
+    .w__footer .nav__footer {
+        width: calc(50% - 10px);
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+	.c__section-img-text .w__section-img-text .img__l {
+		width: 100%;
+	}
+
+	.c__section-img-text .w__section-img-text .text__r {
+		width: 100%;
+	}
+
+    .c__lesson-row .w__lesson-row .lesson__row .lesson__i {
+        width: calc(33.333% - 12px);
+        margin: 0 6px;
+
+        img.lesson__thumb {
+            height: 280px;
+            width: 100%;
+        }
+    }
+
+    .boxed__m {
+        max-width: 1170px;
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+    
+    .boxed__s {
+        max-width: 780px;
+        width: 100%;
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+
+    .c__section-img-text .w__section-img-text .text__r {
+        padding: 40px 30px;
+    }
+
+    .contact-content {
+        flex-wrap: wrap;
+
+        .contact-img {
+            width: 100%;
+            margin-top: 30px;
+            height: 300px;
+        }
+
+        .contact-text {
+            width: 100%;
+            padding: 30px 0;
+        }
+    } 
+}
+
+@media screen and (max-width: 720px) {
+    .c__lesson-row .w__lesson-row .lesson__row {
+        flex-wrap: wrap;
+    }
+    .c__lesson-row .w__lesson-row .lesson__row .lesson__i {
+        width: calc(50% - 24px);
+        margin: 0 12px 30px 12px;
+
+        img.lesson__thumb {
+            height: 280px;
+            width: 100%;
+        }
+    }
+
+    .header__fw-img .hero__banner h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    * {
+        font-size: 14px;
+    }
+
+    .c__lesson-row .w__lesson-row .text__row {
+        padding: 0;
+    }
+
+    .c__lesson-row .w__lesson-row .lesson__row .lesson__i {
+        width: 100%;
+        margin: 30px 0;
+
+        img.lesson__thumb {
+            height: 420px;
+            width: 100%;
+        }
+    }
+
+    .btn__def {
+        padding: 12px 40px !important;
+    }
+
+    .hero__front-page {
+        padding-top: 30px;
+    }
+
+    .c__fw-text {
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+
+    .w__footer {
+        padding-top: 75px;
+        padding-bottom: 100px;
+    }
+
+    .wpcf7 {
+        .flex-it {
+            flex-wrap: wrap;
+        }
+
+        .form_50 {
+            width: 100%;
+            margin-bottom: 1.5em;
+        }
+    }
+ }

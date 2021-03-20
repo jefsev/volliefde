@@ -153,6 +153,42 @@ add_action('init', function () {
     ]);
 });
 
+add_action('init', function () {
+    $d_labels = [
+        'name'              => 'Lesdagen',
+        'singular_name'     => 'Lesdag',
+        'add_new'           => 'Nieuw lesdag',
+        'edit_item'         => 'Lesdag aanpassen',
+    ];
+    register_post_type('lesdagen', [
+        'labels'            => $d_labels,
+        'public'            => true,
+        'has_archive'       => true,
+        'menu_icon'         => 'dashicons-calendar-alt',
+        'supports'          => array('title', 'thumbnail'),
+        'position'          => '4',
+    ]);
+});
+
+add_action('acf/init', function() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        acf_add_options_page(array(
+            'page_title'        => __('Footer'),
+            'menu_title'        => __('Footer'),
+            'menu_slug'         => 'footer-instellingen',
+            'update_button'     => 'Bewaar footer',
+            'updated_message'   => 'Footer opgeslagen',
+            'position'          => '4.1',
+            'capability'        => 'edit_posts',
+            'redirect'          => false
+        ));
+    }
+});
+
 /**
  * Initialize ACF Builder
  */

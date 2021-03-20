@@ -1,5 +1,5 @@
 .c__lesson-row {
-    width: calc(100% + 60px);
+    width: 100%;
     position: relative;
     padding-top: 40px;
     padding-bottom: 75px;
@@ -40,6 +40,8 @@
 
                 img.lesson__thumb {
                     height: 420px;
+                    width: 100%;
+                    object-fit: cover;
                     margin-bottom: 28px;
                     border-radius: 10px;
                 }
@@ -54,14 +56,14 @@
                 h3 {
                     color: $black;
                     font-weight: 600;
-                    font-size: 18px;
+                    font-size: 14px;
                     margin-top: 12px;
                     margin-bottom: 8px;
                 }
 
                 p {
                     color: $black;
-                    font-size: 18px;
+                    font-size: 15px;
                     font-weight: 300;
                     margin: 0;
                 }

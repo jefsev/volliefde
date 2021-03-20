@@ -2,6 +2,7 @@
     position: relative;
     height: 133px;
     background: $green;
+    display: none;
 
     .svg-circle {
         position: absolute;
@@ -13,16 +14,31 @@
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 20px;
         color: #fff;
         margin-top: 30px;
         font-weight: 300;
     }
 }
 
+.content-info {
+    background: $bg-yellow;
+}
+
 .w__footer {
     padding-top: 75px;
     padding-bottom: 100px;
+    position: relative;
+
+    .svg-circle {
+        position: absolute;
+        top: -28px;
+        margin: 0 auto;
+        z-index: 1;
+        left: 0;
+        right: 0;
+    }
+
     .nav__footer {
         width: calc(25% - 10px);
 

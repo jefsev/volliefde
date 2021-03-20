@@ -1,32 +1,42 @@
 <footer class="content-info">
-  <div class="footer__banner flex-it f-row f-just-center f-align-center">
+  {{-- <div class="footer__banner flex-it f-row f-just-center f-align-center">
     <img src="@asset('images/circle.svg')" alt="" class="svg-circle">
     <h3>Vol liefde je zwangerschap en de geboorte van je kindje beleven. </h3>
-  </div>
+  </div> --}}
   <div class="w__footer boxed__m flex-it f-row f-just-between f-align-start f-wrap">
+    <img src="@asset('images/circle.svg')" alt="" class="svg-circle">
+    @options('footer_rij_1')
       <div class="nav__footer flex-it f-col">
-        <h4>Contact</h4>
-        <a href="tel:">0682516209</a>
-        <a href="">info@volliefde.com</a>
+        <h4>@sub('footer_rij_titel')</h4>
+        @fields('footer_top_links')
+        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @endfields
       </div>
+    @endoptions
+    @options('footer_rij_2')
       <div class="nav__footer flex-it f-col">
-        <h4>Inschijven</h4>
-        <a href="tel:">proefles</a>
-        <a href="">Zaterdag ochtend</a>
-        <a href="">Zaterdag ochtend</a>
+        <h4>@sub('footer_rij_titel')</h4>
+        @fields('footer_top_links')
+        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @endfields
       </div>
+    @endoptions
+    @options('footer_rij_3')
       <div class="nav__footer flex-it f-col">
-        <h4>Pagina's</h4>
-        <a href="tel:">Home</a>
-        <a href="tel:">Zwangerschapcursus</a>
-        <a href="tel:">Over mij</a>
+        <h4>@sub('footer_rij_titel')</h4>
+        @fields('footer_top_links')
+        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @endfields
       </div>
+    @endoptions
+    @options('footer_rij_4')
       <div class="nav__footer flex-it f-col">
-        <h4>Meer info</h4>
-        <a href="tel:">Blog</a>
-        <a href="tel:">Algemene voorwaarden</a>
-        <a href="tel:">Cookies</a>
+        <h4>@sub('footer_rij_titel')</h4>
+        @fields('footer_top_links')
+        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @endfields
       </div>
+    @endoptions
       
   </div>
 
