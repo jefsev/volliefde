@@ -40,6 +40,10 @@ header.banner {
 			color: #000;
 			position: relative;
 			z-index: 999;
+
+            img {
+                width: 110px;
+            }
 		}
 		.mobile-hamburger-icon{
 			display: none;

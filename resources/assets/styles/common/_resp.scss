@@ -29,6 +29,10 @@
     .contact-content .contact-text {
         padding: 30px;
     }
+
+    .c__pratical-info .info__practical-info {
+        padding: 50px;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -70,6 +74,15 @@
     .w__footer .nav__footer {
         width: calc(50% - 10px);
         margin-bottom: 15px;
+    }
+
+    .c__pratical-info .img__practical-info {
+        width: 100%;
+        height: 468px;
+    }
+
+    .c__pratical-info .info__practical-info {
+        width: 100%;
     }
 }
 
@@ -143,6 +156,26 @@
     .header__fw-img .hero__banner h1 {
         font-size: 26px;
     }
+
+    .les__hero .hero__banner h1 {
+        font-size: 20px;
+    }
+
+    .les__hero .hero__banner span {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -192,5 +225,9 @@
             width: 100%;
             margin-bottom: 1.5em;
         }
+    }
+
+    .c__pratical-info .info__practical-info {
+        padding: 50px 25px;
     }
  }
