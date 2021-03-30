@@ -27,6 +27,7 @@ $les
     ->endGroup()
     ->addGroup('fullwidth_text')
         ->addWysiwyg('text')
-    ->endGroup();
+    ->endGroup()
+    ->addText('shortcode_form');
 
 return $les;

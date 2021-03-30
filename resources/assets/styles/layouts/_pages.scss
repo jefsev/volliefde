@@ -4,3 +4,59 @@
     padding-top: 75px;
     padding-bottom: 175px;
 }
+
+.c__lesdagen {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .dag {
+        border-radius: 40px;
+        width: 80px;
+        padding: 8px 16px;
+        border: 1px solid #000000;
+        cursor: pointer;
+
+        span {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        span.year {
+            font-size: 10px;
+            font-weight: 500;
+        }
+    }
+}
+
+.inschrijf_module {
+    padding-bottom: 75px;
+    .fw__title-banner {
+        position: relative;
+        height: 133px;
+        background: $bg-yellow;
+        text-align: center;
+    
+        .svg-circle {
+            position: absolute;
+            bottom: -28px;
+            margin: 0 auto;
+            z-index: 1;
+            left: 0;
+            right: 0;
+        }
+    
+        h1 {
+            font-size: 40px;
+            color: #000;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 300;
+            color: #000;
+        }
+    }
+}

@@ -15,6 +15,13 @@ $lesd = new FieldsBuilder('single_lesdag', [
 $lesd->setLocation('post_type', '==', 'lesdagen');
 
 $lesd
+    ->addPostObject('les', [
+        'label' => 'Les',
+        'instructions' => 'Kies een les voor deze dag',
+        'required' => 1,
+        'post_type' => ['lessen'],
+        'multiple' => 0,
+    ])
     ->addText('dag', [ 'wrapper' => [ 'width' => '25', ]])
     ->addText('maand', [ 'wrapper' => [ 'width' => '25', ]])
     ->addText('jaar', [ 'wrapper' => [ 'width' => '25', ]])
@@ -24,6 +31,7 @@ $lesd
         ->addText('naam')
         ->addText('email')
         ->addText('type')
-    ->endRepeater();
+    ->endRepeater()
+    ->addText('shortcode_form');
 
 return $lesd;

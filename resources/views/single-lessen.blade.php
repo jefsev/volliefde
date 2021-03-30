@@ -49,8 +49,39 @@
       @sub('text')
     </section>
     @endgroup
-    <section id="inschrijven" class="inschrijf_module">
 
+    <section id="inschrijven" class="inschrijf_module">
+        <div class="fw__title-banner flex-it f-row f-just-center f-align-center">
+          <h2>Zelf lessen kiezen</h2>
+          <img src="@asset('images/circle.svg')" alt="" class="svg-circle">
+        </div>
+        @php
+            $shortcodeForm = get_field('shortcode_form');
+        @endphp
+
+        <?php
+        $loop = new WP_Query(
+            array(
+                'post_type' => 'lesdagen', 
+                'posts_per_page' => -1,
+            )
+        )
+        ?>
+        <section class="c__lesdagen boxed__s flex-it f-row f-just-start f-align-start f-wrap">
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <div class="dag flex-it f-col f-just-center f-align-center" id="<?php echo get_the_ID(); ?>">
+            <span>@field('dag')-@field('maand')</span>
+            <span class="year">@field('jaar')</span>
+          </div>
+        <?php endwhile; wp_reset_query(); ?>
+        </section>
+
+        <section class="c__fw-text boxed__s">
+            @php
+                echo do_shortcode($shortcodeForm);
+            @endphp
+
+        </section>
     </section>
   @endwhile
 @endsection
