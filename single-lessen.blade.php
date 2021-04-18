@@ -70,8 +70,8 @@
         <section class="c__lesdagen boxed__s flex-it f-row f-just-start f-align-start f-wrap">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <div class="dag flex-it f-col f-just-center f-align-center" id="<?php echo get_the_ID(); ?>">
-            <span id="<?php echo get_the_ID(); ?>">@field('dag')-@field('maand')</span>
-            <span class="year" id="<?php echo get_the_ID(); ?>">@field('jaar')</span>
+            <span>@field('dag')-@field('maand')</span>
+            <span class="year">@field('jaar')</span>
           </div>
         <?php endwhile; wp_reset_query(); ?>
         </section>

@@ -9,7 +9,11 @@
       <div class="nav__footer flex-it f-col">
         <h4>@sub('footer_rij_titel')</h4>
         @fields('footer_top_links')
-        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @php
+            $link = get_sub_field('footer_top_link');
+            $link_target = $link['target'] ? $link['target'] : '_self';
+        @endphp
+        <a href="@sub('footer_top_link', 'url')" target="{{$link_target}}">@sub('footer_top_link', 'title')</a>
         @endfields
       </div>
     @endoptions
@@ -17,7 +21,11 @@
       <div class="nav__footer flex-it f-col">
         <h4>@sub('footer_rij_titel')</h4>
         @fields('footer_top_links')
-        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @php
+            $link = get_sub_field('footer_top_link');
+            $link_target = $link['target'] ? $link['target'] : '_self';
+        @endphp
+        <a href="@sub('footer_top_link', 'url')" target="{{$link_target}}">@sub('footer_top_link', 'title')</a>
         @endfields
       </div>
     @endoptions
@@ -25,7 +33,11 @@
       <div class="nav__footer flex-it f-col">
         <h4>@sub('footer_rij_titel')</h4>
         @fields('footer_top_links')
-        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @php
+        $link = get_sub_field('footer_top_link');
+        $link_target = $link['target'] ? $link['target'] : '_self';
+    @endphp
+    <a href="@sub('footer_top_link', 'url')" target="{{$link_target}}">@sub('footer_top_link', 'title')</a>
         @endfields
       </div>
     @endoptions
@@ -33,7 +45,11 @@
       <div class="nav__footer flex-it f-col">
         <h4>@sub('footer_rij_titel')</h4>
         @fields('footer_top_links')
-        <a href="@sub('footer_top_link', 'url')">@sub('footer_top_link', 'title')</a>
+        @php
+            $link = get_sub_field('footer_top_link');
+            $link_target = $link['target'] ? $link['target'] : '_self';
+        @endphp
+        <a href="@sub('footer_top_link', 'url')" target="{{$link_target}}">@sub('footer_top_link', 'title')</a>
         @endfields
       </div>
     @endoptions

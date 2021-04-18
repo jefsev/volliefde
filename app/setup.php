@@ -186,6 +186,13 @@ add_action('acf/init', function() {
             'capability'        => 'edit_posts',
             'redirect'          => false
         ));
+
+        acf_add_options_page(array(
+            'page_title'        => __('Lessen overzicht'),
+            'menu_title'        => __('lessen pagina'),
+            'menu_slug'         => 'lessen-archief-page',
+            'parent_slug'	=> 'edit.php?post_type=lessen',
+        ));
     }
 });
 

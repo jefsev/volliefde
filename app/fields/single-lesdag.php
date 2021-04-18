@@ -31,7 +31,6 @@ $lesd
         ->addText('naam')
         ->addText('email')
         ->addText('type')
-    ->endRepeater()
-    ->addText('shortcode_form');
+    ->endRepeater();
 
 return $lesd;

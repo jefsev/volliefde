@@ -105,20 +105,6 @@
         }
     }
 
-    .boxed__m {
-        max-width: 1170px;
-        width: 100%;
-        padding: 0 30px;
-        margin: 0 auto;
-    }
-    
-    .boxed__s {
-        max-width: 780px;
-        width: 100%;
-        padding: 0 30px;
-        margin: 0 auto;
-    }
-
     .c__section-img-text .w__section-img-text .text__r {
         padding: 40px 30px;
     }
@@ -175,6 +161,11 @@
     
     h3 {
         font-size: 20px;
+    }
+
+    .w__footer .nav__footer {
+        width: 100%;
+        margin-bottom: 15px;
     }
 }
 

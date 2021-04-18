@@ -15,6 +15,7 @@ $header_front_page
         ->endGroup()
         ->addGroup('header_rechts', [ 'wrapper' => [ 'width' => '50', ]])
             ->addFile('video')
+            ->addImage('stil_afbeelding')
         ->endGroup()
     ->endGroup();
 
