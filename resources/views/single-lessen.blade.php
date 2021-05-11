@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    $curPost = get_queried_object();
+@endphp
   @while(have_posts()) @php the_post() @endphp
     <section class="les__hero">
         <div class="hero-img">
@@ -69,10 +72,14 @@
         ?>
         <section class="c__lesdagen boxed__s flex-it f-row f-just-start f-align-start f-wrap">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            <?php $checkDay = get_field('les');
+            if ($checkDay == $curPost) {
+            ?>
           <div class="dag flex-it f-col f-just-center f-align-center" id="<?php echo get_the_ID(); ?>">
             <span id="<?php echo get_the_ID(); ?>">@field('dag')-@field('maand')</span>
             <span class="year" id="<?php echo get_the_ID(); ?>">@field('jaar')</span>
           </div>
+          <?php } ?>
         <?php endwhile; wp_reset_query(); ?>
         </section>
 

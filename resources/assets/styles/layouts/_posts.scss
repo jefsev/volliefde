@@ -18,7 +18,7 @@
         background: $bg-yellow;
         padding-top: 40px;
         padding-bottom: 64px;
-    
+
         .svg-circle {
             position: absolute;
             bottom: -28px;
@@ -27,7 +27,7 @@
             left: 0;
             right: 0;
         }
-    
+
         h1 {
             font-size: 40px;
             color: #000;
@@ -45,10 +45,10 @@
 
 .c__pratical-info {
     margin-bottom: 75px;
-    
+
     .img__practical-info {
         width: 50%;
-        
+
         img {
             width: 100%;
             height: 468px;
@@ -92,4 +92,41 @@
             margin-top: 30px;
         }
     }
+}
+
+.gfield_quantity,
+.gfield_product_1_2 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+.gform_button.button {
+    font-family: Montserrat;
+    padding: 18px 60px !important;
+    background: #d6eae1;
+    border-radius: 40px;
+    color: #313131;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+}
+
+.gform_wrapper
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+    font-family: "Montserrat";
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    background: rgba(214, 234, 225, 0.5);
+}
+
+.gform_wrapper label.gfield_label,
+.gform_wrapper legend.gfield_label,
+.gform_wrapper label.gfield_label,
+.gform_wrapper legend.gfield_label {
+    font-family: Montserrat;
+    font-weight: 300 !important;
 }

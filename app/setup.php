@@ -151,9 +151,7 @@ add_action('init', function () {
         'supports'          => array('title', 'thumbnail'),
         'position'          => '4',
     ]);
-});
 
-add_action('init', function () {
     $d_labels = [
         'name'              => 'Lesdagen',
         'singular_name'     => 'Lesdag',
@@ -163,7 +161,7 @@ add_action('init', function () {
     register_post_type('lesdagen', [
         'labels'            => $d_labels,
         'public'            => true,
-        'has_archive'       => true,
+        'has_archive'       => false,
         'menu_icon'         => 'dashicons-calendar-alt',
         'supports'          => array('title', 'thumbnail'),
         'position'          => '4',
