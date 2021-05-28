@@ -41,7 +41,7 @@
         </div>
         <div class="info__row flex-it f-row f-just-start">
           <span class="info-30">Prijs:</span>
-          <span class="info-70">€ @sub('prijs') per les</span>
+          <span class="info-70">€ @sub('prijs')</span>
         </div>
         <a href="#inschrijven" class="btn__def">Inschrijven</a>
       </div>
