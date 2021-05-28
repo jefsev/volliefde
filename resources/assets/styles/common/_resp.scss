@@ -23,8 +23,8 @@
     }
 
     .c__section-img-text .w__section-img-text .text__r {
-		padding: 40px;
-	}
+        padding: 40px;
+    }
 
     .contact-content .contact-text {
         padding: 30px;
@@ -48,7 +48,6 @@
         height: auto;
         margin: 0 auto;
         margin-top: 60px;
-        
     }
 
     .hero__front-page {
@@ -68,8 +67,8 @@
     }
 
     .c__lesson-row .w__lesson-row .lesson__row .lesson__i img.lesson__thumb {
-		height: 310px;
-	}
+        height: 310px;
+    }
 
     .w__footer .nav__footer {
         width: calc(50% - 10px);
@@ -87,13 +86,13 @@
 }
 
 @media screen and (max-width: 800px) {
-	.c__section-img-text .w__section-img-text .img__l {
-		width: 100%;
-	}
+    .c__section-img-text .w__section-img-text .img__l {
+        width: 100%;
+    }
 
-	.c__section-img-text .w__section-img-text .text__r {
-		width: 100%;
-	}
+    .c__section-img-text .w__section-img-text .text__r {
+        width: 100%;
+    }
 
     .c__lesson-row .w__lesson-row .lesson__row .lesson__i {
         width: calc(33.333% - 12px);
@@ -122,7 +121,7 @@
             width: 100%;
             padding: 30px 0;
         }
-    } 
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -154,11 +153,11 @@
     h1 {
         font-size: 28px;
     }
-    
+
     h2 {
         font-size: 22px;
     }
-    
+
     h3 {
         font-size: 20px;
     }
@@ -170,9 +169,49 @@
 }
 
 @media screen and (max-width: 560px) {
-
     * {
         font-size: 14px;
+    }
+
+    .btn__text-link {
+        font-size: 16px;
+    }
+
+    .boxed__m {
+        padding: 0 15px;
+    }
+
+    .c__section-img-text .w__section-img-text .text__r {
+        padding: 40px 15px;
+    }
+
+    header.banner nav.nav-mobile-menu .menu-menu-1-container ul {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    header.banner nav.nav-mobile-menu .menu-menu-1-container ul li a {
+        font-size: 18px;
+    }
+
+    .hero__front-page .hero__inner .hero__text p {
+        font-size: 14px;
+    }
+
+    .c__lesson-row .w__lesson-row .lesson__row .lesson__i p {
+        font-size: 14px;
+    }
+
+    .hero__front-page .hero__inner .hero__text h1 {
+        font-size: 24px;
+    }
+
+    .header__fw-img .hero__banner h1 {
+        font-size: 24px;
+    }
+
+    h3.f__reenie {
+        font-size: 24px;
     }
 
     .c__lesson-row .w__lesson-row .text__row {
@@ -221,4 +260,4 @@
     .c__pratical-info .info__practical-info {
         padding: 50px 25px;
     }
- }
+}

@@ -30,6 +30,7 @@ $lesd
     ->addRepeater('inschrijvingen')
         ->addText('naam')
         ->addText('email')
+        ->addText('telefoon')
         ->addText('type')
     ->endRepeater();
 

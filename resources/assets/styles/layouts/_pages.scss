@@ -1,4 +1,4 @@
-// partials 
+// partials
 
 .c__fw-text {
     padding-top: 75px;
@@ -7,11 +7,11 @@
 
 .c__lesdagen {
     padding-top: 40px;
-    padding-bottom: 40px;
     .dag {
         border-radius: 40px;
         width: 90px;
-        margin-right: 8px;
+        margin-right: 3px;
+        margin-bottom: 8px;
         padding: 8px 16px;
         border: 1px solid #000000;
         cursor: pointer;
@@ -41,7 +41,7 @@
         height: 133px;
         background: $bg-yellow;
         text-align: center;
-    
+
         .svg-circle {
             position: absolute;
             bottom: -28px;
@@ -50,7 +50,7 @@
             left: 0;
             right: 0;
         }
-    
+
         h1 {
             font-size: 40px;
             color: #000;

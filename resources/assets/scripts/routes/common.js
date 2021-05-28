@@ -29,41 +29,54 @@ export default {
 
     // Gravity forms JS
 
-    const days = document.querySelectorAll('.dag');
-    let prodInput = document.querySelector('#input_1_8');
-    let daysIds = [];
+        const days = document.querySelectorAll('.dag');
+        let prodInput = document.querySelector('#input_1_8');
+        let daysIds = [];
+        let daysDates = [];
 
-    days.forEach(day => {
-      day.addEventListener('click', (e) => {
-        // Get Post ID and put in Array if in array remove
-        let curId = e.target.id;
-        daysIds.indexOf(curId) === -1 ? daysIds.push(curId) : daysIds.remove(curId);
+        days.forEach(day => {
+        day.addEventListener('click', (e) => {
+            // Get Post ID and put in Array if in array remove
+            let curId = e.target.id;
+            daysIds.indexOf(curId) === -1 ? daysIds.push(curId) : daysIds.remove(curId);
 
-        // Add or remove class when clicked
-        if ( day.classList.contains('activeDay') ) {
-          day.classList.remove('activeDay');
-            let prodInputN = parseFloat(prodInput.value);
-            prodInputN = prodInputN - 1;
-            prodInput.value = prodInputN;
-            $('#input_1_8').val(prodInput.value).change();
-        } else {
-          day.classList.add('activeDay');
-          if (prodInput.value.length > 0) {
-            let prodInputN = parseFloat(prodInput.value);
-            
-            prodInputN = prodInputN + 1;
-            prodInput.value = prodInputN;
-            $('#input_1_8').val(prodInput.value).change();
-          } else {
-            prodInput.value = prodInput.value + 1;
-              
-            $('#input_1_8').val(prodInput.value).change();
-          }
-        }
+            // let daymonth = e.target.querySelector('.dag-maand').innerText;
+            // let year = e.target.querySelector('.year').innerText;
+            let pickedDate = e.target.getAttribute('data-date');
+
+            daysDates.indexOf(pickedDate) === -1 ? daysDates.push(pickedDate) : daysDates.remove(pickedDate);
+
+            // Add or remove class when clicked
+            if ( day.classList.contains('activeDay') ) {
+            day.classList.remove('activeDay');
+                let prodInputN = parseFloat(prodInput.value);
+                prodInputN = prodInputN - 1;
+                prodInput.value = prodInputN;
+                $('#input_1_8').val(prodInput.value).change();
+                $('#input_1_13').val(daysIds);
+                $('#input_1_15').val(daysDates);
+            } else {
+            day.classList.add('activeDay');
+            if (prodInput.value.length > 0) {
+                let prodInputN = parseFloat(prodInput.value);
+                
+                prodInputN = prodInputN + 1;
+                prodInput.value = prodInputN;
+                $('#input_1_8').val(prodInput.value).change();
+                $('#input_1_13').val(daysIds);
+                $('#input_1_15').val(daysDates);
+            } else {
+                prodInput.value = prodInput.value + 1;
+                
+                $('#input_1_8').val(prodInput.value).change();
+                $('#input_1_13').val(daysIds);
+                $('#input_1_15').val(daysDates);
+            }
+            }
 
 
-      })
-    });
+        })
+        });
 
   },
   finalize() {

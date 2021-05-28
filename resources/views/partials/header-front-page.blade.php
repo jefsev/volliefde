@@ -13,7 +13,7 @@
         @group('header_rechts')
         <div class="hero__vid-img">
 
-            <video width="100%" height="100%" preload="none" poster="@sub('stil_afbeelding', 'url')" controls>
+            <video width="100%" height="100%" preload="none" loading="lazy" poster="@sub('stil_afbeelding', 'url')" controls>
                 <source src="@sub('video', 'url')" type="video/mp4">
             </video>
         </div>

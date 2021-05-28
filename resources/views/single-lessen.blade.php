@@ -53,6 +53,17 @@
     </section>
     @endgroup
 
+    <?php
+    $loop = new WP_Query(
+        array(
+            'post_type' => 'lesdagen', 
+            'posts_per_page' => -1,
+            'order' => 'ASC',
+        )
+    )
+    ?>
+
+    <?php if ($loop->have_posts() ): ?>
     <section id="inschrijven" class="inschrijf_module">
         <div class="fw__title-banner flex-it f-row f-just-center f-align-center">
           <h2>Zelf lessen kiezen</h2>
@@ -62,23 +73,18 @@
             $shortcodeForm = get_field('shortcode_form');
         @endphp
 
-        <?php
-        $loop = new WP_Query(
-            array(
-                'post_type' => 'lesdagen', 
-                'posts_per_page' => -1,
-            )
-        )
-        ?>
+
         <section class="c__lesdagen boxed__s flex-it f-row f-just-start f-align-start f-wrap">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
             <?php $checkDay = get_field('les');
-            if ($checkDay == $curPost) {
+            $checkAmountAllowed = get_field('max_inschrijvingen');
+            $amountSubbed = count(get_field('inschrijvingen'));
+            if ($checkDay == $curPost && $checkAmountAllowed >= $amountSubbed) {
             ?>
-          <div class="dag flex-it f-col f-just-center f-align-center" id="<?php echo get_the_ID(); ?>">
-            <span id="<?php echo get_the_ID(); ?>">@field('dag')-@field('maand')</span>
-            <span class="year" id="<?php echo get_the_ID(); ?>">@field('jaar')</span>
-          </div>
+            <div class="dag flex-it f-col f-just-center f-align-center" id="<?php echo get_the_ID(); ?>" data-date="@field('dag')-@field('maand')-@field('jaar')">
+                <span class="dag-maand" id="<?php echo get_the_ID(); ?>" data-date="@field('dag')-@field('maand')-@field('jaar')">@field('dag')-@field('maand')</span>
+                <span class="year" id="<?php echo get_the_ID(); ?>" data-date="@field('dag')-@field('maand')-@field('jaar')">@field('jaar')</span>
+            </div>
           <?php } ?>
         <?php endwhile; wp_reset_query(); ?>
         </section>
@@ -90,5 +96,7 @@
 
         </section>
     </section>
+    <?php endif; ?>
+
   @endwhile
 @endsection

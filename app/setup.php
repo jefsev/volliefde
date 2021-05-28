@@ -206,3 +206,48 @@ add_action('init', function () {
         }
     });
 });
+
+// Gravit forms after payment
+
+add_action( 'gform_post_payment_completed', function($entry, $action) {
+
+    // store submission data
+    $type = $action[ 'type' ];
+    $entryId = $action[ 'entry_id' ];
+
+    if ($type == 'complete_payment') {
+
+        //Get GF entry object to extract data
+        $entry = \GFAPI::get_entry( $entryId );
+        $firstName = rgar( $entry, '3' );
+        $lastName = rgar( $entry, '4' );
+        $email = rgar( $entry, '5' );
+        $phone = rgar( $entry, '6' );
+        $postIds = rgar( $entry, '13' );
+        // create array from textarea input
+        $daysIds = explode(',', $postIds);
+
+        foreach ($daysIds as $dayId) {
+                    // Update ACF rows
+            $row = array(
+                'naam'   => $firstName . ' ' . $lastName,
+                'email'   => $email,
+                'telefoon' => $phone,
+                'type' => 'normaal',
+            );
+
+            add_row('inschrijvingen', $row, $dayId);
+        }
+    } 
+}, 10, 2 );
+
+add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry, $ajax ) {
+    $payment = rgar( $entry, 'payment_status' );
+
+    if ($payment == 'Paid'){
+        $confirmation = array( 'redirect' => '/betaling-gelukt/' );
+    } else {
+        $confirmation = array( 'redirect' => '/betaling-mislukt/' );
+    }
+    return $confirmation;
+}, 10, 4 );
