@@ -166,6 +166,21 @@ add_action('init', function () {
         'supports'          => array('title', 'thumbnail'),
         'position'          => '4',
     ]);
+
+    $b_labels = [
+        'name'              => 'Blog',
+        'singular_name'     => 'Blog',
+        'add_new'           => 'Nieuw blog',
+        'edit_item'         => 'Blog aanpassen',
+    ];
+    register_post_type('blog', [
+        'labels'            => $b_labels,
+        'public'            => true,
+        'has_archive'       => true,
+        'menu_icon'         => 'dashicons-calendar-alt',
+        'supports'          => array('title', 'thumbnail', 'author', 'editor'),
+        'position'          => '4',
+    ]);
 });
 
 add_action('acf/init', function() {
@@ -227,16 +242,19 @@ add_action( 'gform_post_payment_completed', function($entry, $action) {
         // create array from textarea input
         $daysIds = explode(',', $postIds);
 
-        foreach ($daysIds as $dayId) {
-                    // Update ACF rows
-            $row = array(
-                'naam'   => $firstName . ' ' . $lastName,
-                'email'   => $email,
-                'telefoon' => $phone,
-                'type' => 'normaal',
-            );
+        if ($daysIds > 0) {
 
-            add_row('inschrijvingen', $row, $dayId);
+            foreach ($daysIds as $dayId) {
+                        // Update ACF rows
+                $row = array(
+                    'naam'   => $firstName . ' ' . $lastName,
+                    'email'   => $email,
+                    'telefoon' => $phone,
+                    'type' => 'normaal',
+                );
+
+                add_row('inschrijvingen', $row, $dayId);
+            }
         }
     } 
 }, 10, 2 );
