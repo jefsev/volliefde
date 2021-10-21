@@ -18,7 +18,7 @@
                 <h2>@option('title')</h2>
                 <p>@option('text')</p>
             </div>
-        <div class="lesson__row flex-it f-row f-just-start">
+        <div class="lesson__row flex-it f-row f-just-start f-wrap">
             @while(have_posts()) @php the_post() @endphp
 
             <a href="@permalink" class="lesson__i">

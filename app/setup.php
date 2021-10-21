@@ -262,10 +262,13 @@ add_action( 'gform_post_payment_completed', function($entry, $action) {
 add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry, $ajax ) {
     $payment = rgar( $entry, 'payment_status' );
 
-    if ($payment == 'Paid'){
-        $confirmation = array( 'redirect' => '/betaling-gelukt/' );
-    } else {
-        $confirmation = array( 'redirect' => '/betaling-mislukt/' );
+    if ( $form['id'] == '1' || $form['id'] == '2' || $form['id'] == '3' ) 
+    {
+        if ($payment == 'Paid'){
+            $confirmation = array( 'redirect' => '/betaling-gelukt/' );
+        } else {
+            $confirmation = array( 'redirect' => '/betaling-mislukt/' );
+        }
+        return $confirmation;
     }
-    return $confirmation;
 }, 10, 4 );

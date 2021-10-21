@@ -8,12 +8,12 @@
             <h2>@sub('title')</h2>
             <p>@sub('text')</p>
         </div>
-        <div class="lesson__row flex-it f-row f-just-start">
+        <div class="lesson__row flex-it f-row f-just-start f-wrap">
 
             @php
                 $query = new WP_Query([
                     'post_type' => 'lessen',
-                    'post_per_page' => 3,
+                    'posts_per_page' => -1,
                 ]);
             @endphp
             @posts($query)
