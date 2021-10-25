@@ -269,6 +269,8 @@ add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry, $ajax
         } else {
             $confirmation = array( 'redirect' => '/betaling-mislukt/' );
         }
-        return $confirmation;
     }
+
+    return $confirmation;
+
 }, 10, 4 );
